@@ -3,9 +3,21 @@ vim: fdl=3:
 # Vim Markdown
 
 ## About this fork
-My fork of the excellent [vim-markdown](https://github.com/preservim/vim-markdown), created just so that I can tweak for highlighting of a line of code immediately after a heading, which is in agreement with Pandoc's `markdown_strict` interpretation.
+My fork of the excellent [vim-markdown](https://github.com/preservim/vim-markdown), which supplements [vim/runtime/ftplugin/markdown.vim](https://github.com/vim/vim/blob/master/runtime/ftplugin/markdown.vim).
+
+I created this fork so that I can tweak for highlighting of a line of code immediately after a heading, which is in agreement with Pandoc's `markdown_strict` interpretation.
 
 My tweaks are marked 'JH'.
+
+I grab this repository with `GitHub CLI`: `gh repo clone vim-markdown`
+
+## merging from preservim upstream
+
+    git remote -v                                # check remote locations
+    git fetch upstream                           # grab the changed upstream
+    git merge upstream/master -m 'merge message' # merges in the changes
+    rg HEAD                                      # ripgrep for any conflicts
+    git merge --abort                            # undo the merge
 
 ## License copied over
 
