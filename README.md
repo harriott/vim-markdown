@@ -20,7 +20,6 @@ I grab this repository with `GitHub CLI`: `gh repo clone vim-markdown`
     git merge --abort                            # undo the merge
 
 ## License copied over
-
 The MIT License (MIT)
 
 Copyright (c) 2012 Benjamin D. Williams
