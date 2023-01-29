@@ -9,7 +9,7 @@ I created this fork so that I can tweak for highlighting of a line of code immed
 
 My tweaks are marked 'JH'.
 
-I grab this repository with `GitHub CLI`: `gh repo clone vim-markdown`
+I grab this repository with `GitHub CLI`: `gh repo clone vim-markdown`.
 
 ## merging from preservim upstream
 
