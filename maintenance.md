@@ -1,0 +1,17 @@
+vim: fdl=3:
+
+# my personal maintenance notes
+$vimfiles/pack/packs-cp/opt/vim-markdown/ftdetect/markdown.vim
+
+When sourced, replaces vim's defaults:
+    $VIMRUNTIME/ftplugin/markdown.vim
+    $VIMRUNTIME/syntax/markdown.vim
+
+## merging from preservim upstream
+
+    git remote -v                                # check remote locations
+    git fetch upstream                           # grab the changed upstream
+    git merge upstream/master -m 'merge message' # merges in the changes
+    rg HEAD                                      # ripgrep for any conflicts
+    git merge --abort                            # undo the merge
+
