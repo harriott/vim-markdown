@@ -1,9 +1,10 @@
 vim: fdl=3:
 
 # my personal maintenance notes
-$vimfiles/pack/packs-cp/opt/vim-markdown/ftdetect/markdown.vim
+    $vimfiles/pack/packs-cp/opt/vim-markdown/ftdetect/markdown.vim
 
 When sourced, replaces vim's defaults:
+
     $VIMRUNTIME/ftplugin/markdown.vim
     $VIMRUNTIME/syntax/markdown.vim
 
@@ -16,4 +17,6 @@ When sourced, replaces vim's defaults:
     in vim: /^<<<<<<< HEAD$\|^=======$\|^>>>>>>> upstream/master$
     gic '1 commit behind'
     git merge --abort                            # undo the merge
+
+
 
