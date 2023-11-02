@@ -15,7 +15,7 @@ When sourced, replaces vim's defaults:
     git merge upstream/master -m 'merge message' # merges in the changes
     rg HEAD                                      # ripgrep for any conflicts
     in vim: /^<<<<<<< HEAD$\|^=======$\|^>>>>>>> upstream/master$
-    gic '6 commits behind'
+    gic '2 commits behind'
     git merge --abort                            # undo the merge
 
 

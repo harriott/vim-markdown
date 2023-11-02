@@ -94,12 +94,12 @@ syn region mkdLinkTitle matchgroup=mkdDelimiter start=+(+     end=+)+  contained
 " syn region htmlH5       matchgroup=mkdHeading     start="^\s*#####"               end="$" contains=mkdLink,mkdInlineURL,@Spell skipnl nextgroup=mkdCodeAH
 " syn region htmlH6       matchgroup=mkdHeading     start="^\s*######"              end="$" contains=mkdLink,mkdInlineURL,@Spell skipnl nextgroup=mkdCodeAH
 " - JH added   skipnl nextgroup=mkdCodeAH
-syn region htmlH1       matchgroup=mkdHeading     start="^\s*#"                   end="$" contains=@mkdHeadingContent,@Spell
-syn region htmlH2       matchgroup=mkdHeading     start="^\s*##"                  end="$" contains=@mkdHeadingContent,@Spell
-syn region htmlH3       matchgroup=mkdHeading     start="^\s*###"                 end="$" contains=@mkdHeadingContent,@Spell
-syn region htmlH4       matchgroup=mkdHeading     start="^\s*####"                end="$" contains=@mkdHeadingContent,@Spell
-syn region htmlH5       matchgroup=mkdHeading     start="^\s*#####"               end="$" contains=@mkdHeadingContent,@Spell
-syn region htmlH6       matchgroup=mkdHeading     start="^\s*######"              end="$" contains=@mkdHeadingContent,@Spell
+syn region htmlH1       matchgroup=mkdHeading     start="^\s*#"                   end="$" contains=@mkdHeadingContent,@Spell skipnl nextgroup=mkdCodeAH
+syn region htmlH2       matchgroup=mkdHeading     start="^\s*##"                  end="$" contains=@mkdHeadingContent,@Spell skipnl nextgroup=mkdCodeAH
+syn region htmlH3       matchgroup=mkdHeading     start="^\s*###"                 end="$" contains=@mkdHeadingContent,@Spell skipnl nextgroup=mkdCodeAH
+syn region htmlH4       matchgroup=mkdHeading     start="^\s*####"                end="$" contains=@mkdHeadingContent,@Spell skipnl nextgroup=mkdCodeAH
+syn region htmlH5       matchgroup=mkdHeading     start="^\s*#####"               end="$" contains=@mkdHeadingContent,@Spell skipnl nextgroup=mkdCodeAH
+syn region htmlH6       matchgroup=mkdHeading     start="^\s*######"              end="$" contains=@mkdHeadingContent,@Spell skipnl nextgroup=mkdCodeAH
 syn match  htmlH1       /^.\+\n=\+$/ contains=@mkdHeadingContent,@Spell
 syn match  htmlH2       /^.\+\n-\+$/ contains=@mkdHeadingContent,@Spell
 
