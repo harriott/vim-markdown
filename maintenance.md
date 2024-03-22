@@ -10,6 +10,8 @@ When sourced, replaces vim's defaults:
 
 ## merging from preservim upstream
 
+    git pull --unshallow
+    git remote add upstream https://github.com/preservim/vim-markdown
     git remote -v                                # check remote locations
     git fetch upstream                           # grab the changed upstream
     git merge upstream/master -m 'merge message' # merges in the changes
