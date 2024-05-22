@@ -186,7 +186,7 @@ HtmlHiLink mkdLineBreak        Visual
 HtmlHiLink mkdFootnotes        htmlLink
 HtmlHiLink mkdLink             htmlLink
 HtmlHiLink mkdURL              htmlString
-HtmlHiLink mkdInlineURL        htmlLink
+HtmlHiLink mkdInlineURL        StatusLine  " JH
 HtmlHiLink mkdID               Identifier
 HtmlHiLink mkdLinkDef          mkdID
 HtmlHiLink mkdLinkDefTarget    mkdURL
