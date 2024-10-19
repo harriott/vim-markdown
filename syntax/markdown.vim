@@ -186,7 +186,11 @@ HtmlHiLink mkdLineBreak        Visual
 HtmlHiLink mkdFootnotes        htmlLink
 HtmlHiLink mkdLink             htmlLink
 HtmlHiLink mkdURL              htmlString
-HtmlHiLink mkdInlineURL        StatusLine  " JH
+if exists('g:neovide')
+  HtmlHiLink mkdInlineURL StatusLine  " PaperColor
+else
+  HtmlHiLink mkdInlineURL Conceal  " tomorrow
+endif  " JH
 HtmlHiLink mkdID               Identifier
 HtmlHiLink mkdLinkDef          mkdID
 HtmlHiLink mkdLinkDefTarget    mkdURL
