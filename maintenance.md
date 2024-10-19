@@ -10,6 +10,7 @@ When sourced, replaces vim's defaults:
 
 ## merging from preservim upstream
 
+    gsu  # - and ensure no waiting commits
     git pull --unshallow
     git remote add upstream https://github.com/preservim/vim-markdown
     git remote -v                                   # check remote locations
