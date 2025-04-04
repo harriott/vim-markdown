@@ -7,7 +7,7 @@ My fork of the excellent [vim-markdown](https://github.com/preservim/vim-markdow
 
 I created this fork so that I can tweak for highlighting of a line of code immediately after a heading, which is in agreement with Pandoc's `markdown_strict` interpretation.
 
-My tweaks are marked 'JH', eg in `$vfv/packs/packs-cp/opt/vim-markdown/syntax/markdown.vim`.
+My tweaks are marked 'JH', eg in [$vfv/packs/packs-cp-full/opt/vim-markdown/syntax/markdown.vim](https://github.com/harriott/vim-markdown/blob/master/syntax/markdown.vim).
 
 I grab this repository with `GitHub CLI`: `gh repo clone vim-markdown`.
 

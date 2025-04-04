@@ -187,7 +187,7 @@ HtmlHiLink mkdFootnotes        htmlLink
 HtmlHiLink mkdLink             htmlLink
 HtmlHiLink mkdURL              htmlString
 if exists('g:neovide')
-  HtmlHiLink mkdInlineURL StatusLine  " PaperColor
+  HtmlHiLink mkdInlineURL StatusLineTerm  " PaperColor
 else
   HtmlHiLink mkdInlineURL Conceal  " tomorrow
 endif  " JH
