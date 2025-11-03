@@ -13,10 +13,10 @@ When sourced, replaces vim's defaults:
     $vfvp/packs-cp-full/opt/vim-markdown
     gsu  # - and ensure no waiting commits
     git pull --unshallow
-    git remote add upstream https://github.com/preservim/vim-markdown
     git remote -v                                   # check remote locations
+        git remote add upstream https://github.com/preservim/vim-markdown
     git fetch upstream                              # grab the changed upstream
-    git merge upstream/master -m '4 commits behind' # merges in the changes
+    git merge upstream/master -m '9 commits behind' # merges in the changes
     rg HEAD                                         # ripgrep for any conflicts
     in vim: /^<<<<<<< HEAD$\|^=======$\|^>>>>>>> upstream/master$
     gic '1 commit behind'
