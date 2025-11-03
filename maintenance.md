@@ -1,7 +1,7 @@
 vim: fdl=3:
 
 # my personal maintenance notes
-    $vfvp/packs-cp/opt/vim-markdown/ftdetect/markdown.vim
+    $vfvp/packs-cp-full/opt/vim-markdown/ftdetect/markdown.vim
 
 When sourced, replaces vim's defaults:
 
@@ -10,6 +10,7 @@ When sourced, replaces vim's defaults:
 
 ## merging from preservim upstream
 
+    $vfvp/packs-cp-full/opt/vim-markdown
     gsu  # - and ensure no waiting commits
     git pull --unshallow
     git remote add upstream https://github.com/preservim/vim-markdown
@@ -20,4 +21,6 @@ When sourced, replaces vim's defaults:
     in vim: /^<<<<<<< HEAD$\|^=======$\|^>>>>>>> upstream/master$
     gic '1 commit behind'
     git merge --abort                               # undo the merge
+
+modeline spacer
 

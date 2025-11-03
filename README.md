@@ -13,8 +13,9 @@ I grab this repository with `GitHub CLI`: `gh repo clone vim-markdown`.
 
 ## handy mappings
 - `HeaderDecrease`/`HeaderIncrease` also works on range & selection
-- `:Toc[h]` horizontal split for toc
-- `:Tocv` vertical split for toc
+- Slow on huge files:
+    - `:Toc[h]` horizontal split for toc
+    - `:Tocv` vertical split for toc
 
 ### moving to headers
 - `]h`/`]u` current/parent
