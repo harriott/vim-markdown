@@ -84,48 +84,13 @@ syntax region mkdLinkTitle matchgroup=mkdDelimiter start=+'+     end=+'+  contai
 syntax region mkdLinkTitle matchgroup=mkdDelimiter start=+(+     end=+)+  contained
 
 "HTML headings
-<<<<<<< HEAD
 " - JH added   skipnl nextgroup=mkdCodeAH
-syn region htmlH1 matchgroup=mkdHeading start="^\s*#"      end="$" contains=@mkdHeadingContent,@Spell skipnl nextgroup=mkdCodeAH
-syn region htmlH2 matchgroup=mkdHeading start="^\s*##"     end="$" contains=@mkdHeadingContent,@Spell skipnl nextgroup=mkdCodeAH
-syn region htmlH3 matchgroup=mkdHeading start="^\s*###"    end="$" contains=@mkdHeadingContent,@Spell skipnl nextgroup=mkdCodeAH
-syn region htmlH4 matchgroup=mkdHeading start="^\s*####"   end="$" contains=@mkdHeadingContent,@Spell skipnl nextgroup=mkdCodeAH
-syn region htmlH5 matchgroup=mkdHeading start="^\s*#####"  end="$" contains=@mkdHeadingContent,@Spell skipnl nextgroup=mkdCodeAH
-syn region htmlH6 matchgroup=mkdHeading start="^\s*######" end="$" contains=@mkdHeadingContent,@Spell skipnl nextgroup=mkdCodeAH
-" (JH previously had: contains=mkdLink,mkdInlineURL,@Spell)
-syn match  htmlH1 /^.\+\n=\+$/ contains=@mkdHeadingContent,@Spell
-syn match  htmlH2 /^.\+\n-\+$/ contains=@mkdHeadingContent,@Spell
-
-"define Markdown groups
-syn match  mkdLineBreak    /  \+$/
-syn region mkdBlockquote   start=/^\s*>/                   end=/$/ contains=mkdLink,mkdInlineURL,mkdLineBreak,@Spell
-execute 'syn region mkdCode matchgroup=mkdCodeDelimiter start=/\(\([^\\]\|^\)\\\)\@<!`/                     end=/`/'  . s:concealcode
-execute 'syn region mkdCode matchgroup=mkdCodeDelimiter start=/\(\([^\\]\|^\)\\\)\@<!``/ skip=/[^`]`[^`]/   end=/``/' . s:concealcode
-execute 'syn region mkdCode matchgroup=mkdCodeDelimiter start=/^\s*\z(`\{3,}\)[^`]*$/                       end=/^\s*\z1`*\s*$/'            . s:concealcode
-execute 'syn region mkdCode matchgroup=mkdCodeDelimiter start=/\(\([^\\]\|^\)\\\)\@<!\~\~/  end=/\(\([^\\]\|^\)\\\)\@<!\~\~/'               . s:concealcode
-execute 'syn region mkdCode matchgroup=mkdCodeDelimiter start=/^\s*\z(\~\{3,}\)\s*[0-9A-Za-z_+-]*\s*$/      end=/^\s*\z1\~*\s*$/'           . s:concealcode
-execute 'syn region mkdCode matchgroup=mkdCodeDelimiter start="<pre\(\|\_s[^>]*\)\\\@<!>"                   end="</pre>"'                   . s:concealcode
-execute 'syn region mkdCode matchgroup=mkdCodeDelimiter start="<code\(\|\_s[^>]*\)\\\@<!>"                  end="</code>"'                  . s:concealcode
-syn region mkdFootnote     start="\[^"                     end="\]"
-syn match  mkdCode         /^\s*\n\(\(\s\{8,}[^ ]\|\t\t\+[^\t]\).*\n\)\+/
-syn match  mkdCode         /\%^\(\(\s\{4,}[^ ]\|\t\+[^\t]\).*\n\)\+/
-syn match  mkdCode         /^\s*\n\(\(\s\{4,}[^ ]\|\t\+[^\t]\).*\n\)\+/ contained
-syn match  mkdCodeAH       /\(\(\s\{4,}[^ ]\|\t\+[^\t]\).*\n\)\+/ contained
-" - JH tweak to allow code immediately after heading
-syn match  mkdListItem     /^\s*\%([-*+]\|\d\+\.\)\ze\s\+/ contained nextgroup=mkdListItemCheckbox
-syn match  mkdListItemCheckbox     /\[[xXoO ]\]\ze\s\+/ contained contains=mkdListItem
-syn region mkdListItemLine start="^\s*\%([-*+]\|\d\+\.\)\s\+" end="$" oneline contains=@mkdNonListItem,mkdListItem,mkdListItemCheckbox,@Spell
-syn region mkdNonListItemBlock start="\(\%^\(\s*\([-*+]\|\d\+\.\)\s\+\)\@!\|\n\(\_^\_$\|\s\{4,}[^ ]\|\t+[^\t]\)\@!\)" end="^\(\s*\([-*+]\|\d\+\.\)\s\+\)\@=" contains=@mkdNonListItem,@Spell
-syn match  mkdRule         /^\s*\*\s\{0,1}\*\s\{0,1}\*\(\*\|\s\)*$/
-syn match  mkdRule         /^\s*-\s\{0,1}-\s\{0,1}-\(-\|\s\)*$/
-syn match  mkdRule         /^\s*_\s\{0,1}_\s\{0,1}_\(_\|\s\)*$/
-=======
-syntax region htmlH1       matchgroup=mkdHeading     start="^\s*#"                   end="$" contains=@mkdHeadingContent,@Spell
-syntax region htmlH2       matchgroup=mkdHeading     start="^\s*##"                  end="$" contains=@mkdHeadingContent,@Spell
-syntax region htmlH3       matchgroup=mkdHeading     start="^\s*###"                 end="$" contains=@mkdHeadingContent,@Spell
-syntax region htmlH4       matchgroup=mkdHeading     start="^\s*####"                end="$" contains=@mkdHeadingContent,@Spell
-syntax region htmlH5       matchgroup=mkdHeading     start="^\s*#####"               end="$" contains=@mkdHeadingContent,@Spell
-syntax region htmlH6       matchgroup=mkdHeading     start="^\s*######"              end="$" contains=@mkdHeadingContent,@Spell
+syntax region htmlH1       matchgroup=mkdHeading     start="^\s*#"                   end="$" contains=@mkdHeadingContent,@Spell skipnl nextgroup=mkdCodeAH
+syntax region htmlH2       matchgroup=mkdHeading     start="^\s*##"                  end="$" contains=@mkdHeadingContent,@Spell skipnl nextgroup=mkdCodeAH
+syntax region htmlH3       matchgroup=mkdHeading     start="^\s*###"                 end="$" contains=@mkdHeadingContent,@Spell skipnl nextgroup=mkdCodeAH
+syntax region htmlH4       matchgroup=mkdHeading     start="^\s*####"                end="$" contains=@mkdHeadingContent,@Spell skipnl nextgroup=mkdCodeAH
+syntax region htmlH5       matchgroup=mkdHeading     start="^\s*#####"               end="$" contains=@mkdHeadingContent,@Spell skipnl nextgroup=mkdCodeAH
+syntax region htmlH6       matchgroup=mkdHeading     start="^\s*######"              end="$" contains=@mkdHeadingContent,@Spell skipnl nextgroup=mkdCodeAH
 syntax match  htmlH1       /^.\+\n=\+$/ contains=@mkdHeadingContent,@Spell
 syntax match  htmlH2       /^.\+\n-\+$/ contains=@mkdHeadingContent,@Spell
 
@@ -143,6 +108,8 @@ syntax region mkdFootnote     start="\[^"                     end="\]"
 syntax match  mkdCode         /^\s*\n\(\(\s\{8,}[^ ]\|\t\t\+[^\t]\).*\n\)\+/
 syntax match  mkdCode         /\%^\(\(\s\{4,}[^ ]\|\t\+[^\t]\).*\n\)\+/
 syntax match  mkdCode         /^\s*\n\(\(\s\{4,}[^ ]\|\t\+[^\t]\).*\n\)\+/ contained
+syntax match  mkdCodeAH       /\(\(\s\{4,}[^ ]\|\t\+[^\t]\).*\n\)\+/ contained
+" - JH tweak to allow code immediately after heading
 syntax match  mkdListItem     /^\s*\%([-*+]\|\d\+\.\)\ze\s\+/ contained nextgroup=mkdListItemCheckbox
 syntax match  mkdListItemCheckbox     /\[[xXoO ]\]\ze\s\+/ contained contains=mkdListItem
 syntax region mkdListItemLine start="^\s*\%([-*+]\|\d\+\.\)\s\+" end="$" oneline contains=@mkdNonListItem,mkdListItem,mkdListItemCheckbox,@Spell
@@ -150,7 +117,6 @@ syntax region mkdNonListItemBlock start="\(\%^\(\s*\([-*+]\|\d\+\.\)\s\+\)\@!\|\
 syntax match  mkdRule         /^\s*\*\s\{0,1}\*\s\{0,1}\*\(\*\|\s\)*$/
 syntax match  mkdRule         /^\s*-\s\{0,1}-\s\{0,1}-\(-\|\s\)*$/
 syntax match  mkdRule         /^\s*_\s\{0,1}_\s\{0,1}_\(_\|\s\)*$/
->>>>>>> upstream/master
 
 " YAML frontmatter
 if get(g:, 'vim_markdown_frontmatter', 0)
@@ -187,16 +153,10 @@ endif
 
 " Strike through
 if get(g:, 'vim_markdown_strikethrough', 0)
-<<<<<<< HEAD
-    execute 'syn region mkdStrike matchgroup=htmlStrikeJH start="\%(\~\~\)" end="\%(\~\~\)"'
+    execute 'syntax region mkdStrike matchgroup=htmlStrikeJH start="\%(\~\~\)" end="\%(\~\~\)"' . s:concealends
     HtmlHiLink mkdStrike        htmlStrikeJH
     hi def htmlStrikeJH term=strikethrough cterm=strikethrough gui=strikethrough guifg=DarkGray
 endif  " JH
-=======
-    execute 'syntax region mkdStrike matchgroup=htmlStrike start="\%(\~\~\)" end="\%(\~\~\)"' . s:concealends
-    HtmlHiLink mkdStrike        htmlStrike
-endif
->>>>>>> upstream/master
 
 syntax cluster mkdHeadingContent contains=htmlItalic,htmlBold,htmlBoldItalic,mkdFootnotes,mkdLink,mkdInlineURL,mkdStrike,mkdCode
 syntax cluster mkdNonListItem contains=@htmlTop,htmlItalic,htmlBold,htmlBoldItalic,mkdFootnotes,mkdInlineURL,mkdLink,mkdLinkDef,mkdLineBreak,mkdBlockquote,mkdCode,mkdRule,htmlH1,htmlH2,htmlH3,htmlH4,htmlH5,htmlH6,mkdMath,mkdStrike

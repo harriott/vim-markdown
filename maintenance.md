@@ -19,7 +19,7 @@ When sourced, replaces vim's defaults:
     git merge upstream/master -m '9 commits behind' # merges in the changes
     rg HEAD                                         # ripgrep for any conflicts
     in vim: /^<<<<<<< HEAD$\|^=======$\|^>>>>>>> upstream/master$
-    gic '1 commit behind'
+    gic '9 commit behind'
     git merge --abort                               # undo the merge
 
 modeline spacer
